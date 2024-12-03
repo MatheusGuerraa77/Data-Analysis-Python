@@ -61,3 +61,41 @@ opcoes = st.multiselect(
 )
 
 st.write('Você selecionou', opcoes)
+
+st.header('Utilizando o Slider')
+
+idade = st.slider('Quantos anos você tem?', 0, 100, 25)
+st.write('Eu tenho', idade, 'anos de idade')
+
+st.header('utilizando o Select Slider')
+
+cor = st.select_slider(
+    'Selecione a cor',
+    options=['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'])
+st.write('My favourite color is', cor)
+
+import streamlit as st
+
+number = st.number_input("Insert a number")
+st.write("The current number is ", number)
+
+today = datetime.datetime.now()
+next_year = today.year + 1
+jan_1 = datetime.date(next_year, 1, 1)
+dec_31 = datetime.date(next_year, 12, 31)
+
+d = st.date_input(
+    "Select your vacation for next year",
+    (jan_1, datetime.date(next_year, 1, 7)),
+    jan_1,
+    dec_31,
+    format="MM.DD.YYYY",
+)
+
+uploaded_files = st.file_uploader(
+    "Choose a CSV file", accept_multiple_files=True
+)
+for uploaded_file in uploaded_files:
+    bytes_data = uploaded_file.read()
+    st.write("filename:", uploaded_file.name)
+    st.write(bytes_data)
