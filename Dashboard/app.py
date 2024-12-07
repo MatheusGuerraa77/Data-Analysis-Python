@@ -14,9 +14,9 @@ def main():
     with aba1:
         display_dataframe(df)
     with aba2:
-        pass
+        display_charts(df)
     with aba3:
-        pass
+        display_metrics(df)
 #Função para exibir o DataFrame
 def display_dataframe(data):
     st.header("Visualização do DataFrame")
@@ -28,6 +28,45 @@ def display_dataframe(data):
     )
     filtered_data = data[data['Regiao'].isin(selected_region)]
     st.write(filtered_data)
+#Função para exibir os gráficos
+def display_charts(data):
+    st.header("Visualização de Gráficos")
+    if data.empty:
+        st.warning("Os dados estão vazios. Não é possível gerar gráficos.")
+        return
+# Gráfico 1- Desempenho po região    
+    st.subheader("Desempenho por Região")
+    plt.figure(figsize=(10, 6))
+    sns.countplot(x="Regiao", data=data)
+    st.pyplot(plt.gcf())
+    
+# Gráfico 2- Itens mais vendidos
+    st.subheader('Itens mais Vendidos')
+    plt.figure(figsize=(10, 6))
+    sns.countplot(x="Item", data=data)
+    st.pyplot(plt.gcf())
+
+# Gráfico 3: Preço Médio por Item
+    st.subheader('Preço Médio por Item')
+    avg_price = data.groupby('Item')['PrecoUnidade'].mean().sort_values(ascending=False)
+    st.write(avg_price)
+
+# Função para exibir métricas
+def display_metrics(data):
+    st.subheader('Métricas')
+    
+    # Métricas simples
+    total_sales = data['Unidades'].sum()
+    average_price = data['PrecoUnidade'].mean()
+    most_productive = data['Vendedor'].value_counts().idxmax()
+
+    coluna1, coluna2, coluna3 = st.columns(3)
+    with coluna1:
+        st.metric('O vendedor mais produtivo foi:', most_productive)
+    with coluna2:
+        st.metric('Vendas Totais:', total_sales)
+    with coluna3:
+        st.metric('Preço Médio:', round(average_price, 2))
     
 # Execução do aplicativo
 if __name__ == "__main__":
