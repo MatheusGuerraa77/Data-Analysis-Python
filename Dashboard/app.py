@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-#1- Importando os Dados
+#1 - Importando os Dados
 
 data = pd.read_csv("Dashboard/data/Pedidos.csv")
 df = pd.DataFrame(data)
@@ -19,7 +19,7 @@ def main():
     with aba3:
         display_metrics(df)
         
-#Função para exibir o DataFrame
+# Função para exibir o DataFrame
 
 def display_dataframe(data):
     st.header("Visualização do DataFrame")
@@ -32,7 +32,7 @@ def display_dataframe(data):
     filtered_data = data[data['Regiao'].isin(selected_region)]
     st.write(filtered_data)
     
-#Função para exibir os gráficos
+# Função para exibir os gráficos
 
 def display_charts(data):
     st.header("Visualização de Gráficos")
@@ -40,14 +40,14 @@ def display_charts(data):
         st.warning("Os dados estão vazios. Não é possível gerar gráficos.")
         return
     
-# Gráfico 1- Desempenho po região    
+# Gráfico 1 - Desempenho po região    
 
     st.subheader("Desempenho por Região")
     plt.figure(figsize=(10, 6))
     sns.countplot(x="Regiao", data=data)
     st.pyplot(plt.gcf())
     
-# Gráfico 2- Itens mais vendidos
+# Gráfico 2 - Itens mais vendidos
 
     st.subheader('Itens mais Vendidos')
     plt.figure(figsize=(10, 6))
