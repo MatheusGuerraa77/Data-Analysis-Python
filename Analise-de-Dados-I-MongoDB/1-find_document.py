@@ -27,3 +27,24 @@ print(db.laureates.find_one(filter_doc))
 Marie Curie ganhou pelas descobertas dos elementos radio e polônio
 
 """
+
+# 5 - Utilizando o operador in
+filter_in = db.laureates.count_documents(
+    {
+        'diedCountry':{
+            '$in':['France', 'USA']
+        }
+        
+    }
+)
+print(filter_in)
+
+# 6 - Utlilizando o operador ne- not equal
+filter_ne = db.laureates.count_documents(
+    {
+        'diedCountry':{
+            '$ne': 'USA'
+        }
+    }
+)
+print(filter_ne)
