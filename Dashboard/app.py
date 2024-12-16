@@ -40,9 +40,9 @@ def display_charts(data):
         st.warning("Os dados estão vazios. Não é possível gerar gráficos.")
         return
     
-# Gráfico 1 - Desempenho po região    
+# Gráfico 1 - Desempenho por região    
 
-    st.subheader("Desempenho por Região")
+    st.subheader('Desempenho por Região')
     plt.figure(figsize=(10, 6))
     sns.countplot(x="Regiao", data=data)
     st.pyplot(plt.gcf())
