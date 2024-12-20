@@ -36,3 +36,36 @@ print(db.laureates.count_documents({
         }
     }
 }))
+
+# 4 - Utilizando Regex
+# Alguns laureados nasceram em lugar que se tornaria Polônia
+print(db.laureates.distinct(
+    'bornCountry',
+    {'bornCountry': {'$regex':'Poland'}}
+))
+
+# 5 - Case insensitive(poland)
+print(db.laureates.distinct(
+    'bornCountry',
+    {'bornCountry': {'$regex':'poland', '$options':'i'}}
+))
+
+# 6 - Utilizando classe Regex
+from bson.regex import Regex
+
+print(db.laureates.distinct(
+    'bornCountry',
+    {'bornCountry': Regex('poland', 'i')}
+))
+
+# 7 - Começa com
+print(db.laureates.distinct(
+    'bornCountry',
+    {'bornCountry': Regex('^Poland')}
+))
+
+# 8 - Termina com \ escape parêntesis
+print(db.laureates.distinct(
+    'bornCountry',
+    {'bornCountry': Regex('now Poland\)$')}
+))
