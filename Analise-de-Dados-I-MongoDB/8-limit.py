@@ -17,3 +17,27 @@ for doc in db.prizes.find({
     print('{year} {category}'.format(**doc))
     
 print('\n')
+
+# 2 - Utilizando o limit
+for doc in db.prizes.find({
+    'laureates.share':'3'
+}, limit=5):
+    print('{year} {category}'.format(**doc))
+    
+print('\n')
+
+# 3 - Utilizando Skip
+for doc in db.prizes.find({
+    'laureates.share':'3'
+}, skip=5, limit=5): #Pulando os 5 primeiros resultados
+    print('{year} {category}'.format(**doc))
+    
+print('\n')
+
+# 4 - Refatorando / Ordenando ascendentemente
+for doc in db.prizes.find({'laureates.share':'3'}, limit=5)\
+    .sort([('year', 1)]) \
+    .skip(3) \
+    .limit(3):
+        print('{year} {category}'.format(**doc))
+    
