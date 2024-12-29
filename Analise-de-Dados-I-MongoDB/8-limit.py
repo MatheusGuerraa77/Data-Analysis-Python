@@ -40,4 +40,3 @@ for doc in db.prizes.find({'laureates.share':'3'}, limit=5)\
     .skip(3) \
     .limit(3):
         print('{year} {category}'.format(**doc))
-    
