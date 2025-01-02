@@ -18,3 +18,10 @@ dados_anos = {
     'Juventus': [1958, 1985, 1996, 2011, 2015],
     'Bayern Munich': [1974, 1975, 1976, 2001, 2003]
 }
+
+# 3 - Criando a Series
+series_titulos = pd.Series(dados_titulos)
+series_anos = pd.Series(dados_anos)
+
+print(series_titulos)
+print(series_anos)
