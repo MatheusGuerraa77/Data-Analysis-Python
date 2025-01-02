@@ -25,3 +25,10 @@ series_anos = pd.Series(dados_anos)
 
 print(series_titulos)
 print(series_anos)
+
+# 4 - Criando Dataframe combinando a series
+data = {'Títulos': series_titulos, 'Anos': series_anos}
+dataframe_times = pd.DataFrame(data)
+
+# 5 - Exibindo o DataFrame
+print(dataframe_times)
