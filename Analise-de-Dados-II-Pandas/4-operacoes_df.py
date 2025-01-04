@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # 1 - Criando Dataframe de Exemplo
 data = {
@@ -11,3 +12,36 @@ data = {
 df = pd.DataFrame(data)
 
 print(df)
+
+# 2 - Visualizando primeiros linhas do DataFrame
+print(df.head(2))
+
+# 3 - Informações sobre o DataFrame
+print(df.info())
+
+# 4 - Estatística Descritiva
+print(df.describe())
+
+# 5 - Condição em DataFrame (salário > 5000)
+print(df[df['Salario'] > 5000])
+
+# 6 - Ordenação (pela idade)
+print(df.sort_values(by= 'Idade', ascending=False))
+
+# 7 - Adicionando coluna calculada
+df['Bonus'] = df['Salario'] * 0.1
+print(df)
+
+# 8 - Agrupamento de agregação
+print(df.groupby('Cargo')['Salario'].mean())
+
+# 9 - Vizualização básica
+df.plot(
+    kind='bar',
+    x='Nome',
+    y='Salario',
+    title='Salário dos Funcionários',
+    rot=45
+)
+
+plt.show()
