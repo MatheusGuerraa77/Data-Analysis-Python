@@ -1,0 +1,31 @@
+DataPedido,Regiao,Estado,Vendedor,Item,Unidades,PrecoUnidade
+2016-06-07,Nordeste,Pernambuco,Tobias,Geladeira,62,400.99
+2016-07-11,Nordeste,Paraíba,Nadia,Microondas,29,160.99
+2016-07-20,Sudeste,Minas Gerais,Carlos,Geladeira,55,1200.49
+2016-07-19,Nordeste,Bahia,Tania,Microondas,81,1998.99
+2016-08-16,Sudeste,Rio de Janeiro,Pedro,Geladeira,42,2300.95
+2016-08-22,Nordeste,Alagoas,Tobias,Fogão,35,408.99
+2016-08-24,Sul,Santa Catarina,Mauricio,Lavadora,3,2750
+2016-09-10,Sudeste,Minas Gerais,Smith,Lavadora,2,1250
+2016-09-10,Sudeste,Rio de Janeiro,Alan,Fogão,7,1000.29
+2016-09-12,Nordeste,Pernambuco,Tobias,Geladeira,26,1508.99
+2016-09-26,Sul,Rio Grande do Sul,Mauricio,Fogão,76,1459.99
+2016-10-15,Sudeste,Minas Gerais,Carlos,Microondas,28,898.99
+2016-10-14,Sul,Rio Grande do Sul,Thomas,Microondas,57,1900.99
+2016-10-22,Nordeste,Sergipe,Tobias,Fogão,64,800.99
+2016-10-31,Sudeste,Rio de Janeiro,Raquel,Fogão,14,1340.29
+2016-11-18,Nordeste,Bahia,Tania,Fogão,15,1900.99
+2016-11-17,Sudeste,Rio de Janeiro,Alex,Microondas,11,1400.99
+2016-11-20,Sul,Paraná,Mauricio,Geladeira,22,1800.49
+2016-11-25,Nordeste,Ceará,Nadia,Lavadora,5,3100
+2016-11-30,Sudeste,São Paulo,Carlos,Fogão,37,1500.59
+2016-12-02,Nordeste,Maranhão,Tania,Microondas,43,1200.99
+2016-12-10,Sudeste,Minas Gerais,Alan,Lavadora,4,2100
+2016-12-15,Sul,Santa Catarina,Thomas,Geladeira,19,2500.39
+2016-12-18,Nordeste,Paraíba,Tobias,Microondas,24,800.89
+2016-12-22,Sudeste,Rio de Janeiro,Alex,Fogão,31,990.99
+2016-12-27,Sul,Paraná,Mauricio,Lavadora,6,2000
+2017-01-05,Nordeste,Bahia,Tania,Geladeira,14,2200.49
+2017-01-10,Sudeste,São Paulo,Pedro,Microondas,18,999.99
+2017-01-15,Nordeste,Ceará,Nadia,Fogão,21,1250.99
+2017-01-20,Sul,Santa Catarina,Thomas,Lavadora,2,1800.89
