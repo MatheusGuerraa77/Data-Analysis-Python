@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# 1- Criando Dataframe de Exemplo
+# 1 - Criando Dataframe de Exemplo
 data = {
     'Nome': ['Alice', 'Bob', 'Charlie', 'David', 'Emily'],
     'Idade': [25, 30, 35, 40, 27],
