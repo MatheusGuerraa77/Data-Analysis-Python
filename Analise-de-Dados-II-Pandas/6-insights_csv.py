@@ -1,9 +1,9 @@
 #Insights:
-#1-Desempenho Vendas por Região
-#2-Vendedor mais produtivo
-#3-Itens mais vendidos
-#4-Preço Médio por item
-#5-Correlação entre unidade Vendida e Preço Unitário
+#1- Desempenho Vendas por Região
+#2- Vendedor mais produtivo
+#3- Itens mais vendidos
+#4- Preço Médio por item
+#5- Correlação entre unidade Vendida e Preço Unitário
 
 import pandas as pd
 df = pd.read_csv('data1/pedidos.csv')
