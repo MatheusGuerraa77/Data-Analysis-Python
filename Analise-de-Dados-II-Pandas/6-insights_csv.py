@@ -18,3 +18,6 @@ print(venda_regiao)
 # 2 - Vendedor mais produtivo
 vendas_vendedor = df.groupby('Vendedor')['Unidades'].sum()
 print(vendas_vendedor.idxmax())
+
+# 3 - Total de unidades vendidas por item
+total_unidades_item = df.groupby('item')
