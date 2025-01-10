@@ -20,4 +20,20 @@ vendas_vendedor = df.groupby('Vendedor')['Unidades'].sum()
 print(vendas_vendedor.idxmax())
 
 # 3 - Total de unidades vendidas por item
-total_unidades_item = df.groupby('item')
+total_unidades_item = df.groupby('Item')['Unidades'].sum()
+print(total_unidades_item)
+
+# 4 - Média de Preço por Item
+media_preco_item = df.groupby('Item')['PrecoUnidade'].mean()
+print(media_preco_item)
+
+#5 - Correlação entre unidade Vendida e Preço Unitário
+"""
+A correlação pode variar entre -1 e 1, indicando a direção e a 
+força da relação linear entre as variáveis.
+Um valor próximo de 1 indica uma correlação positiva forte,
+enquanto próximo de -1 indica correlação negativa forte.
+Um valor próximo a 0 indica uma correlação fraca.
+"""
+correlacao = df['Unidades'].corr(df['PrecoUnidade'])
+print(correlacao)
