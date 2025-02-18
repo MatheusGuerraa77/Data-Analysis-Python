@@ -4,11 +4,13 @@ from mpl_toolkits.mplot3d import Axes3D
 
 
 # 1 - Gerando dados aleatórios
+
 x = np.random.rand(50)
 y = np.random.rand(50)
 z = np.random.rand(50)
 
 # 2 - Criando o gráfico de dispersão
+
 plt.figure(figsize=(8, 6))
 plt.scatter(x, y)
 plt.title('Gráfico de Dispersão com Dados Aleatórios')
@@ -18,6 +20,7 @@ plt.grid(True)
 plt.show()
 
 # 3 - Criando o gráfico 3D
+
 fig = plt.figure(figsize=(8, 6))
 ax = fig.add_subplot(111, projection=('3d'))
 
