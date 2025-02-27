@@ -15,6 +15,7 @@ df =pd.DataFrame(vendas)
 print(df)
 
 # 2 - Criando ViolinPlot com Seaborn
+
 plt.figure(figsize=(8, 6))
 sns.violinplot(
     x='Categoria',
