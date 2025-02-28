@@ -1,4 +1,4 @@
-# O violinplot é útil para vizualizar a distribuição de uma variável numérica em diferentes categorias.
+# O Violinplot é útil para vizualizar a distribuição de uma variável numérica em diferentes categorias.
 
 import seaborn as sns
 import matplotlib.pyplot as plt
