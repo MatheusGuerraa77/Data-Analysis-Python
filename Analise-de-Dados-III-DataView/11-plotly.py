@@ -13,6 +13,7 @@ df = pd.DataFrame(data)
 print(df)
 
 # 2 - Criando o gráfico de linhas interativas com Plotly
+
 fig = go.Figure()
 
 fig.add_trace(go.Scatter(
@@ -35,6 +36,7 @@ fig.add_trace(go.Scatter(
 ))
 
 # 3 - Layout do gráfico
+
 fig.update_layout(
     title='Variação de Preço ao longo do tempo',
     xaxis_title = 'Data',
