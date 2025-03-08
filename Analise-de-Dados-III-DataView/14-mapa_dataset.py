@@ -6,7 +6,6 @@ url = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.csv'
 dados_terremotos = pd.read_csv(url)
 
 # 2 - Filtrar os dados para obter terremotos mais significativos
-
 terremotos_significativos = dados_terremotos[dados_terremotos['mag'] >= 6.0]
 print(terremotos_significativos)
 
