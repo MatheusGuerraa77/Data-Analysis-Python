@@ -13,7 +13,6 @@ print(terremotos_significativos)
 mapa_terremoto = folium.Map(location=[0,0], zoom_start=2)
 
 # 4 - Adicio0na marcadores para terremotos significativos
-
 for index, terremoto in terremotos_significativos.iterrows():
     folium.Marker(
         location=[terremoto['latitude'], terremoto['longitude']],
