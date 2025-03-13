@@ -15,7 +15,7 @@ for cafe in cafeteiras:
     folium.Marker(
         location=cafe['localização'],
         popup=cafe['nome'],
-        icon=folium.Icon(color='blue', icon='coffee')
+        icon=folium.Icon(color='green', icon='coffee')
     ).add_to(mapa)
     
 mapa.save('Analise-de-Dados-III-DataView/mapa.html')
